@@ -193,7 +193,7 @@
   /* ---------- event ---------- */
   .event-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start;}
   @media(max-width:760px){.event-wrap{grid-template-columns:1fr;}}
-  .event-flyer{border:1px solid var(--line);padding:10px;background:#fff;border-radius:4px;}
+  .event-flyer img{border-radius:6px;}
   .event-table{width:100%;border-collapse:collapse;font-size:14px;}
   .event-table th,.event-table td{
     text-align:left;padding:14px 0;border-bottom:1px solid var(--line);vertical-align:top;
@@ -272,14 +272,13 @@
       <a href="#event">開催概要</a>
       <a href="#shoplist">出店者一覧</a>
       <a href="#access">アクセス</a>
-      <a href="https://www.klimclimbing.com" target="_blank" rel="noopener">KLIM CLIMBING公式サイト</a>
       <a class="nav-cta" href="#entry">出店者様応募</a>
     </nav>
   </div>
 </header>
 
 <section class="hero" id="hero">
-  <span class="poster-tag">2026年9月13日 11:00〜16:00 KLIM CLIMBING駐車場</span>
+  <span class="poster-tag"><span id="poster-date-cell">2026年9月13日 11:00〜16:00</span> KLIM CLIMBING駐車場</span>
   <div class="hero-inner">
     <span class="hero-eyebrow">入場無料 ・ 雨天決行 / 荒天中止</span>
     <h1 class="hero-title">昼から<br>マルシェ</h1>
@@ -288,7 +287,7 @@
       登った後も、登らなくても。お昼から夕方まで、食べて・見て・くつろげる時間を、地域のみなさんと一緒に。
     </p>
     <div class="hero-meta">
-      <div><span class="label">DATE</span><strong>第2日曜(予定)</strong></div>
+      <div><span class="label">DATE</span><strong id="hero-date-cell">2026年9月13日（日）</strong></div>
       <div><span class="label">TIME</span><strong>11:00〜16:00</strong></div>
       <div><span class="label">VENUE</span><strong>KLIM CLIMBING 駐車場</strong></div>
       <div><span class="label">ADDRESS</span><strong>愛知県刈谷市小垣江町本郷下24番地7</strong></div>
@@ -350,7 +349,7 @@
     <div class="event-wrap">
       <div>
         <div class="event-flyer">
-          <img src="assets/flyer.png" alt="昼からマルシェ フライヤー">
+          <img src="assets/flyer-current.png" alt="昼からマルシェ フライヤー">
         </div>
       </div>
       <div>
@@ -483,18 +482,23 @@
 </script>
 
 <script>
-  // 開催日を「毎月第2日曜」で自動計算して表示する（手動更新不要）
+  // 開催日を自動計算して表示する（手動更新不要）
+  // 初回開催日(FIRST_EVENT)までは初回日付を表示し、それ以降は「毎月第2日曜」を自動で繰り上げる
   (function () {
+    const FIRST_EVENT = new Date(2026, 8, 13); // 2026年9月13日(月は0始まりなので8=9月)
+
     function secondSundayOf(year, month) {
       const first = new Date(year, month, 1);
       const firstSunday = 1 + ((7 - first.getDay()) % 7);
       return new Date(year, month, firstSunday + 7);
     }
     function nextEventDate(base) {
+      const todayOnly = new Date(base.getFullYear(), base.getMonth(), base.getDate());
+      if (todayOnly <= FIRST_EVENT) return FIRST_EVENT;
+
       let year = base.getFullYear();
       let month = base.getMonth();
       let candidate = secondSundayOf(year, month);
-      const todayOnly = new Date(base.getFullYear(), base.getMonth(), base.getDate());
       if (todayOnly > candidate) {
         month += 1;
         if (month > 11) { month = 0; year += 1; }
@@ -502,10 +506,18 @@
       }
       return candidate;
     }
-    const cell = document.getElementById('event-date-cell');
-    if (!cell) return;
+
     const d = nextEventDate(new Date());
-    cell.textContent = `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日（日） 11:00〜16:00`;
+    const ymd = `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
+
+    const eventCell = document.getElementById('event-date-cell');
+    if (eventCell) eventCell.textContent = `${ymd}（日） 11:00〜16:00`;
+
+    const heroCell = document.getElementById('hero-date-cell');
+    if (heroCell) heroCell.textContent = `${ymd}（日）`;
+
+    const posterCell = document.getElementById('poster-date-cell');
+    if (posterCell) posterCell.textContent = `${ymd} 11:00〜16:00`;
   })();
 </script>
 
