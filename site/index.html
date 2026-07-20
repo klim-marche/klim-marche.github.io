@@ -356,7 +356,7 @@
       <div>
         <table class="event-table">
           <tr><th>イベント名</th><td>昼からマルシェ 一回目</td></tr>
-          <tr><th>日時</th><td>毎月 第2日曜 11:00〜16:00（予定）</td></tr>
+          <tr><th>日時</th><td id="event-date-cell">2026年9月13日（日） 11:00〜16:00</td></tr>
           <tr><th>会場</th><td>KLIM CLIMBING 駐車場</td></tr>
           <tr><th>住所</th><td>愛知県刈谷市小垣江町本郷下24番地7</td></tr>
           <tr><th>入場料</th><td>無料</td></tr>
@@ -480,6 +480,33 @@
   const mainNav = document.getElementById('mainNav');
   navToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
   mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mainNav.classList.remove('open')));
+</script>
+
+<script>
+  // 開催日を「毎月第2日曜」で自動計算して表示する（手動更新不要）
+  (function () {
+    function secondSundayOf(year, month) {
+      const first = new Date(year, month, 1);
+      const firstSunday = 1 + ((7 - first.getDay()) % 7);
+      return new Date(year, month, firstSunday + 7);
+    }
+    function nextEventDate(base) {
+      let year = base.getFullYear();
+      let month = base.getMonth();
+      let candidate = secondSundayOf(year, month);
+      const todayOnly = new Date(base.getFullYear(), base.getMonth(), base.getDate());
+      if (todayOnly > candidate) {
+        month += 1;
+        if (month > 11) { month = 0; year += 1; }
+        candidate = secondSundayOf(year, month);
+      }
+      return candidate;
+    }
+    const cell = document.getElementById('event-date-cell');
+    if (!cell) return;
+    const d = nextEventDate(new Date());
+    cell.textContent = `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日（日） 11:00〜16:00`;
+  })();
 </script>
 
 </body>
