@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>昼からマルシェ 一回目 | KLIM CLIMBING</title>
+<meta name="description" content="2026年9月13日(日) 11:00〜16:00、愛知県刈谷市のクライミングジムKLIM CLIMBING駐車場にて開催「昼からマルシェ」。入場無料。フード・ドリンク・クラフトなど出店者様募集中。">
+<link rel="canonical" href="https://klim-marche.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="昼からマルシェ | KLIM CLIMBING">
+<meta property="og:title" content="昼からマルシェ 一回目 | KLIM CLIMBING">
+<meta property="og:description" content="2026年9月13日(日) 11:00〜16:00、愛知県刈谷市のクライミングジムKLIM CLIMBING駐車場にて開催「昼からマルシェ」。入場無料。出店者様募集中。">
+<meta property="og:url" content="https://klim-marche.github.io/">
+<meta property="og:image" content="https://klim-marche.github.io/assets/flyer.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow">
+<style>
+  :root{
+    --cream:#f4f4f2;
+    --cream-deep:#eceae4;
+    --ink:#201f1d;
+    --coral:#eb473d;
+    --coral-deep:#c9352c;
+    --pink:#d06e9b;
+    --mint:#7abfcc;
+    --line:#d8d5cd;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",-apple-system,BlinkMacSystemFont,sans-serif;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  /* ---------- draft banner ---------- */
+  .draft-banner{
+    background:var(--ink);
+    color:#fff;
+    text-align:center;
+    font-size:12px;
+    letter-spacing:.08em;
+    padding:8px 12px;
+  }
+  .draft-banner strong{color:var(--coral);}
+
+  /* ---------- header ---------- */
+  header.site-header{
+    position:sticky;top:0;z-index:50;
+    background:var(--cream);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    max-width:var(--maxw);margin:0 auto;padding:12px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
+  .brand img{height:34px;width:auto;border-radius:6px;}
+  .brand-text{font-size:13px;letter-spacing:.05em;font-weight:700;}
+  .brand-text small{display:block;font-weight:400;font-size:10px;color:#666;letter-spacing:.08em;}
+
+  nav.main-nav{display:flex;align-items:center;gap:28px;}
+  nav.main-nav a{
+    font-size:13px;font-weight:700;letter-spacing:.03em;text-decoration:none;
+    padding:6px 0;border-bottom:2px solid transparent;
+  }
+  nav.main-nav a:hover{border-color:var(--coral);}
+  .nav-cta{
+    background:var(--coral);color:#fff !important;padding:9px 18px !important;
+    border-radius:999px;border:none !important;font-size:12px !important;
+  }
+  .nav-toggle{display:none;background:none;border:none;font-size:22px;cursor:pointer;}
+
+  @media (max-width:860px){
+    nav.main-nav{
+      position:fixed;inset:60px 0 0 0;background:var(--cream);
+      flex-direction:column;align-items:flex-start;padding:24px;gap:20px;
+      transform:translateX(100%);transition:transform .25s ease;overflow-y:auto;
+    }
+    nav.main-nav.open{transform:translateX(0);}
+    .nav-toggle{display:block;}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    background:var(--cream);
+    padding:64px 0 56px;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:-8%;left:-6%;
+    width:78%;height:130%;
+    background:url("assets/flower_texture.png") center/cover no-repeat;
+    opacity:.16;
+    filter:grayscale(1) contrast(1.05);
+    mix-blend-mode:multiply;
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .hero-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;font-weight:700;letter-spacing:.12em;
+    color:var(--coral-deep);border:1px solid var(--coral);
+    padding:5px 14px;border-radius:999px;margin-bottom:22px;
+  }
+  .hero-title{
+    font-size:clamp(48px,9vw,104px);
+    line-height:1.02;
+    font-weight:900;
+    color:var(--coral);
+    letter-spacing:.02em;
+    margin:0 0 8px;
+    writing-mode:horizontal-tb;
+  }
+  .hero-title .num{
+    display:inline-block;font-size:.34em;color:var(--ink);vertical-align:middle;margin-left:.3em;
+    font-weight:700;letter-spacing:.05em;
+  }
+  .hero-sub{font-size:15px;max-width:34em;color:#3a3a3a;margin:18px 0 30px;}
+
+  .hero-meta{
+    display:flex;flex-wrap:wrap;gap:14px 32px;margin-bottom:34px;
+  }
+  .hero-meta div{font-size:14px;}
+  .hero-meta span.label{
+    display:block;font-size:11px;letter-spacing:.1em;color:var(--pink);font-weight:700;margin-bottom:4px;
+  }
+  .hero-meta strong{font-size:17px;font-weight:700;}
+
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 28px;border-radius:999px;font-weight:700;font-size:14px;
+    text-decoration:none;letter-spacing:.03em;border:2px solid transparent;
+    transition:transform .15s ease,opacity .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--coral);color:#fff;}
+  .btn-outline{border-color:var(--ink);color:var(--ink);}
+
+  /* vertical poster-style tag */
+  .poster-tag{
+    position:absolute;top:24px;right:24px;
+    writing-mode:vertical-rl;
+    font-size:12px;letter-spacing:.25em;color:var(--coral);
+    font-weight:700;border-left:1px solid var(--coral);padding-left:12px;
+    display:none;
+  }
+  @media(min-width:900px){.poster-tag{display:block;}}
+
+  /* ---------- section shared ---------- */
+  section{padding:72px 0;border-bottom:1px solid var(--line);}
+  .section-head{margin-bottom:38px;text-align:center;}
+  .section-head .en{
+    display:block;font-size:12px;letter-spacing:.22em;color:var(--pink);font-weight:700;margin-bottom:10px;
+  }
+  .section-head h2{font-size:clamp(24px,4vw,32px);margin:0;letter-spacing:.04em;}
+  .section-head p.desc{margin:14px auto 0;max-width:38em;font-size:14px;color:#555;}
+
+  /* ---------- about ---------- */
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
+  .about-grid img{border-radius:6px;}
+  .about-grid .body p{font-size:14.5px;color:#333;}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr;}}
+
+  /* ---------- news ---------- */
+  .news-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;}
+  .news-item{
+    display:grid;grid-template-columns:110px 1fr;gap:20px;
+    padding:18px 0;border-bottom:1px dashed var(--line);
+  }
+  .news-item time{font-size:12px;color:var(--pink);font-weight:700;letter-spacing:.05em;}
+  .news-item .tag{
+    display:inline-block;font-size:10px;background:var(--cream-deep);color:#555;
+    padding:2px 8px;border-radius:4px;margin-bottom:6px;
+  }
+  .news-item p{margin:0;font-size:13.5px;color:#444;}
+  .placeholder-note{
+    text-align:center;font-size:12px;color:#999;margin-top:20px;
+  }
+
+  /* ---------- event ---------- */
+  .event-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start;}
+  @media(max-width:760px){.event-wrap{grid-template-columns:1fr;}}
+  .event-flyer{border:1px solid var(--line);padding:10px;background:#fff;border-radius:4px;}
+  .event-table{width:100%;border-collapse:collapse;font-size:14px;}
+  .event-table th,.event-table td{
+    text-align:left;padding:14px 0;border-bottom:1px solid var(--line);vertical-align:top;
+  }
+  .event-table th{width:110px;color:var(--pink);font-weight:700;font-size:12.5px;letter-spacing:.05em;}
+  .map-embed{margin-top:20px;border-radius:6px;overflow:hidden;border:1px solid var(--line);}
+  .map-embed iframe{width:100%;height:260px;border:0;display:block;}
+
+  /* ---------- shop list ---------- */
+  .shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;}
+  .shop-card{
+    background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px 18px;text-align:center;
+  }
+  .shop-card .icon{font-size:26px;margin-bottom:10px;}
+  .shop-card h3{font-size:14px;margin:0 0 6px;letter-spacing:.03em;}
+  .shop-card p{margin:0;font-size:12px;color:#999;}
+  .shop-soon{
+    display:inline-block;margin-top:10px;font-size:10px;background:var(--cream-deep);
+    padding:3px 10px;border-radius:999px;color:#777;
+  }
+
+  /* ---------- entry (exhibitor application) ---------- */
+  .entry-section{
+    background:var(--ink);color:#fff;border-bottom:none;
+  }
+  .entry-section .section-head h2{color:#fff;}
+  .entry-section .section-head .en{color:var(--mint);}
+  .entry-section .desc{color:#cfcfcf;}
+  .entry-box{
+    max-width:720px;margin:0 auto;background:rgba(255,255,255,.05);
+    border:1px dashed rgba(255,255,255,.35);border-radius:10px;padding:40px 28px;text-align:center;
+  }
+  .entry-box h3{margin:0 0 10px;font-size:16px;}
+  .entry-box p{font-size:13px;color:#d8d8d8;margin:0 0 24px;}
+  .entry-rules{
+    text-align:left;max-width:560px;margin:0 auto 28px;font-size:12.5px;color:#c9c9c9;
+    background:rgba(255,255,255,.04);border-radius:8px;padding:18px 20px;
+  }
+  .entry-rules li{margin-bottom:6px;}
+  /* ▼▼ ここに後日Googleフォームの埋め込み(iframe)またはリンクを差し込みます ▼▼ */
+  #entry-form-slot{
+    margin-top:6px;
+  }
+  .btn-mint{background:var(--mint);color:#12313a;}
+
+  /* ---------- access ---------- */
+  .access-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  @media(max-width:760px){.access-grid{grid-template-columns:1fr;}}
+  .access-info dl{font-size:14px;margin:0;}
+  .access-info dt{color:var(--pink);font-weight:700;font-size:12px;letter-spacing:.05em;margin-top:18px;}
+  .access-info dd{margin:6px 0 0;}
+
+  /* ---------- instagram ---------- */
+  .insta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+  @media(max-width:640px){.insta-grid{grid-template-columns:repeat(2,1fr);}}
+  .insta-ph{
+    aspect-ratio:1/1;background:linear-gradient(135deg,var(--pink),var(--coral));
+    border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;opacity:.55;
+  }
+
+  /* ---------- footer ---------- */
+  footer{padding:48px 0 28px;text-align:center;}
+  footer .brand{justify-content:center;margin-bottom:18px;}
+  footer .foot-links{display:flex;justify-content:center;gap:20px;font-size:12.5px;margin-bottom:18px;flex-wrap:wrap;}
+  footer .foot-addr{font-size:12px;color:#777;margin-bottom:10px;}
+  footer .copy{font-size:11px;color:#aaa;}
+
+  section#top-anchor{display:none;}
+</style>
+</head>
+<body>
+
+<div class="draft-banner">この画面は <strong>ラフ案（デザイン検討用ドラフト）</strong> です。文言・画像・出店者情報は仮のものです。公開前に内容確認をお願いします。</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#hero">
+      <img src="assets/klim_logo_badge.png" alt="KLIM CLIMBING ロゴ">
+      <span class="brand-text">昼からマルシェ<small>KLIM CLIMBING presents</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="メニュー">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#about">マルシェとは</a>
+      <a href="#event">開催概要</a>
+      <a href="#shoplist">出店者一覧</a>
+      <a href="#access">アクセス</a>
+      <a class="nav-cta" href="#entry">出店者様応募</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <span class="poster-tag">2026年9月13日 11:00〜16:00 KLIM CLIMBING駐車場</span>
+  <div class="hero-inner">
+    <span class="hero-eyebrow">入場無料 ・ 雨天決行 / 荒天中止</span>
+    <h1 class="hero-title">昼から<br>マルシェ<span class="num">一回目</span></h1>
+    <p class="hero-sub">
+      クライミングジム「KLIM CLIMBING」の駐車場を開放して開催する、新しいマルシェがはじまります。
+      登った後も、登らなくても。お昼から夕方まで、食べて・見て・くつろげる時間を、地域のみなさんと一緒に。
+    </p>
+    <div class="hero-meta">
+      <div><span class="label">DATE</span><strong>2026年9月13日（日）</strong></div>
+      <div><span class="label">TIME</span><strong>11:00〜16:00</strong></div>
+      <div><span class="label">VENUE</span><strong>KLIM CLIMBING 駐車場</strong></div>
+      <div><span class="label">ADDRESS</span><strong>愛知県刈谷市小垣江町本郷下24番地7</strong></div>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#event">マルシェ詳細を見る</a>
+      <a class="btn btn-outline" href="#entry">出店者様応募はこちら</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">ABOUT</span>
+      <h2>昼からマルシェとは</h2>
+      <p class="desc">（以下は構成イメージのための仮テキストです。KLIM CLIMBING様の想いに合わせて調整してください）</p>
+    </div>
+    <div class="about-grid">
+      <img src="assets/flyer.png" alt="昼からマルシェ 告知フライヤー">
+      <div class="body">
+        <p>「昼からマルシェ」は、クライミングジム KLIM CLIMBING の駐車場を舞台に開催する、地域のためのマルシェです。</p>
+        <p>フード・ドリンク・クラフト・ワークショップなど、こだわりを持ったお店が集まります。お子さま連れやペットとのお散歩がてら、ぜひ足をお運びください。</p>
+        <p>記念すべき第一回目の開催となります。今後、毎月〜隔月ペースでの継続開催を予定しています（開催頻度は仮）。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">NEWS</span>
+      <h2>お知らせ</h2>
+    </div>
+    <div class="news-list">
+      <div class="news-item">
+        <time>2026.07.20</time>
+        <div><span class="tag">お知らせ</span><p>特設サイトを公開しました（ラフ案）。出店者様募集も近日開始予定です。</p></div>
+      </div>
+      <div class="news-item">
+        <time>準備中</time>
+        <div><span class="tag">出店者募集</span><p>出店者様応募フォームを準備中です。公開まで今しばらくお待ちください。</p></div>
+      </div>
+      <div class="news-item">
+        <time>準備中</time>
+        <div><span class="tag">当日情報</span><p>駐車場のご案内・雨天時の対応などは、決定次第こちらでお知らせします。</p></div>
+      </div>
+    </div>
+    <p class="placeholder-note">※ NEWS欄はダミーです。実際のお知らせに差し替えてください。</p>
+  </div>
+</section>
+
+<section id="event">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">EVENT</span>
+      <h2>開催概要</h2>
+    </div>
+    <div class="event-wrap">
+      <div>
+        <div class="event-flyer">
+          <img src="assets/flyer.png" alt="昼からマルシェ フライヤー">
+        </div>
+      </div>
+      <div>
+        <table class="event-table">
+          <tr><th>イベント名</th><td>昼からマルシェ 一回目</td></tr>
+          <tr><th>日時</th><td>2026年9月13日（日） 11:00〜16:00</td></tr>
+          <tr><th>会場</th><td>KLIM CLIMBING 駐車場</td></tr>
+          <tr><th>住所</th><td>愛知県刈谷市小垣江町本郷下24番地7</td></tr>
+          <tr><th>入場料</th><td>無料</td></tr>
+          <tr><th>天候</th><td>雨天決行・荒天中止（仮）</td></tr>
+          <tr><th>主催</th><td>KLIM CLIMBING</td></tr>
+        </table>
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%88%88%E8%B0%B7%E5%B8%82%E5%B0%8F%E5%9E%A3%E6%B1%9F%E7%94%BA%E6%9C%AC%E9%83%B7%E4%B8%8B24%E7%95%AA%E5%9C%B07&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="会場地図"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="shoplist">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">SHOP LIST</span>
+      <h2>出店者一覧</h2>
+      <p class="desc">出店者様の情報は決定次第、カテゴリー別に掲載していきます（現在はダミー枠です）。</p>
+    </div>
+    <div class="shop-grid">
+      <div class="shop-card"><div class="icon">🍔</div><h3>フード</h3><p>出店者募集中</p><span class="shop-soon">近日公開</span></div>
+      <div class="shop-card"><div class="icon">☕</div><h3>ドリンク</h3><p>出店者募集中</p><span class="shop-soon">近日公開</span></div>
+      <div class="shop-card"><div class="icon">🧺</div><h3>クラフト・雑貨</h3><p>出店者募集中</p><span class="shop-soon">近日公開</span></div>
+      <div class="shop-card"><div class="icon">🌿</div><h3>アクセサリー</h3><p>出店者募集中</p><span class="shop-soon">近日公開</span></div>
+      <div class="shop-card"><div class="icon">🐾</div><h3>ペット関連</h3><p>出店者募集中</p><span class="shop-soon">近日公開</span></div>
+      <div class="shop-card"><div class="icon">🧘</div><h3>ワークショップ</h3><p>出店者募集中</p><span class="shop-soon">近日公開</span></div>
+      <div class="shop-card"><div class="icon">🎵</div><h3>音楽・ライブ</h3><p>出演者募集中</p><span class="shop-soon">近日公開</span></div>
+      <div class="shop-card"><div class="icon">🧗</div><h3>KLIM CLIMBING</h3><p>クライミング体験</p><span class="shop-soon">詳細準備中</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="entry" class="entry-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">ENTRY</span>
+      <h2>出店者様募集</h2>
+      <p class="desc">「昼からマルシェ」に出店してみませんか？ジャンルは問いません。フード・ドリンク・クラフト・ワークショップ・音楽ライブなど、幅広く募集しています。</p>
+    </div>
+    <div class="entry-box">
+      <h3>出店者様応募フォーム（準備中）</h3>
+      <p>現在、応募フォーム（Googleフォーム）を準備しています。公開後、下のボタンから応募いただけるようになります。</p>
+      <ul class="entry-rules">
+        <li>・出店料、電源使用の有無などは詳細確定後にご案内します（仮）</li>
+        <li>・荷下ろし・搬入経路は当日ご案内します（仮）</li>
+        <li>・雨天決行・荒天中止（仮）</li>
+        <li>・その他ルールはフォーム公開時に併せて掲載します</li>
+      </ul>
+      <!-- ▼▼▼ Googleフォーム埋め込み予定エリア ▼▼▼
+        フォーム発行後、以下のいずれかに差し替えてください。
+
+        (A) 埋め込み表示にする場合:
+        <iframe src="【GoogleフォームのURL】?embedded=true"
+                width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">
+          読み込んでいます…
+        </iframe>
+
+        (B) 別タブでフォームを開くボタンにする場合:
+        <a class="btn btn-mint" href="【GoogleフォームのURL】" target="_blank" rel="noopener">出店者様応募フォームはこちら</a>
+      -->
+      <div id="entry-form-slot">
+        <a class="btn btn-mint" href="#" aria-disabled="true" onclick="return false;">出店者様応募フォーム（準備中）</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">ACCESS</span>
+      <h2>アクセス</h2>
+    </div>
+    <div class="access-grid">
+      <div class="access-info">
+        <dl>
+          <dt>会場</dt>
+          <dd>KLIM CLIMBING 駐車場</dd>
+          <dt>住所</dt>
+          <dd>愛知県刈谷市小垣江町本郷下24番地7</dd>
+          <dt>お車でお越しの方</dt>
+          <dd>会場敷地内に駐車スペースをご用意予定です（台数・詳細は準備中）。</dd>
+          <dt>公共交通機関でお越しの方</dt>
+          <dd>最寄駅・バス停の情報は決定次第掲載します。</dd>
+        </dl>
+      </div>
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%88%88%E8%B0%B7%E5%B8%82%E5%B0%8F%E5%9E%A3%E6%B1%9F%E7%94%BA%E6%9C%AC%E9%83%B7%E4%B8%8B24%E7%95%AA%E5%9C%B07&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="アクセス地図" style="height:340px;"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="instagram" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">INSTAGRAM</span>
+      <h2>最新情報はInstagramでも</h2>
+      <p class="desc">出店者情報や当日の様子はInstagramでも発信予定です（アカウント準備中）。</p>
+    </div>
+    <div class="insta-grid">
+      <div class="insta-ph">写真準備中</div>
+      <div class="insta-ph">写真準備中</div>
+      <div class="insta-ph">写真準備中</div>
+      <div class="insta-ph">写真準備中</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#hero">
+      <img src="assets/klim_logo_badge.png" alt="KLIM CLIMBING ロゴ">
+      <span class="brand-text">昼からマルシェ</span>
+    </a>
+    <div class="foot-links">
+      <a href="#about">マルシェとは</a>
+      <a href="#event">開催概要</a>
+      <a href="#shoplist">出店者一覧</a>
+      <a href="#entry">出店者様応募</a>
+      <a href="#access">アクセス</a>
+    </div>
+    <p class="foot-addr">KLIM CLIMBING ｜ 愛知県刈谷市小垣江町本郷下24番地7</p>
+    <p class="copy">© 2026 KLIM CLIMBING「昼からマルシェ」（本サイトはラフ案です）</p>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
+  mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mainNav.classList.remove('open')));
+</script>
+
+</body>
+</html>
